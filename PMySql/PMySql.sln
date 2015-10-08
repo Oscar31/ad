@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PMySql", "PMySql\PMySql.csproj", "{988650CC-08C0-4160-BA9D-1ED88687B11F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{988650CC-08C0-4160-BA9D-1ED88687B11F}.Debug|x86.ActiveCfg = Debug|x86
+		{988650CC-08C0-4160-BA9D-1ED88687B11F}.Debug|x86.Build.0 = Debug|x86
+		{988650CC-08C0-4160-BA9D-1ED88687B11F}.Release|x86.ActiveCfg = Release|x86
+		{988650CC-08C0-4160-BA9D-1ED88687B11F}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = PMySql\PMySql.csproj
+	EndGlobalSection
+EndGlobal

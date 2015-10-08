@@ -1,0 +1,68 @@
+2015.09.29
+añadida foreing de articulo categoria a categoria id
+
+2015.09.24
+instalar
+ monodoc-mysql-manual
+
+
+2015.09.22
+insertar registros en artículo y categoría:
+ articulo.sql
+ categoria.sql
+
+instalar monodevelop (y otros relacionados)
+ monodevelop
+ monodevelop-database
+ monodevelop-nunit
+ monodevelop-versioncontrol
+
+ monodoc-browser
+
+hacemos un PHolaMundo para ver que todo funciona
+
+
+2015.09.17
+Instalar el lamp de bitnami:
+https://bitnami.com/stack/lamp
+usuario: root contraseña de desarrollo: sistemas
+crear base de datos dbprueba
+ dbprueba.sql
+
+2015.09.15
+
+luisvelasco@I4-00:~$ sudo apt-get install git
+
+luisvelasco@I4-00:~$ git clone https://github.com/luisvelasco15/ad.git
+
+luisvelasco@I4-00:~$ cd ad
+luisvelasco@I4-00:~/ad$ git status
+
+--para no repetir el prompt, suponemos (si no se dice otra cosa) que estamos en el directorio ad
+
+con gedit creo un fichero
+gedit hola-mundo-git.txt
+
+lo "preparo para el siguiente commit"
+git add .
+
+configuramos user.name y user.email (esto sólo será necesario hacerlo una vez por usuario)
+git config --global user.name luisvelasco15
+git config --global user.email luis.velasco@institutoserpis.org
+
+hago commit (esto crea una versión nueva)
+git commit -m "Hola mundo desde git"
+
+para sincronizar (subir) con el repositorio remoto:
+configuramos la variable push.default (por ahora ni idea de lo que significa)
+git config --global push.default simple 
+
+y subimos:
+git push (nos pide usuario y contraseña)
+
+otros comandos:
+git log (lista de commits)
+git checkout trozo inicial del identificador del commit (en la working copy tendremos esa versión)
+git checkout master (regresa a la rama master al último commit)
+ 
+
