@@ -4,6 +4,7 @@ using Gtk;
 using MySql.Data.MySqlClient;
 using System.Data;
 using PArticulo;
+using System.Collections;
 
 public partial class MainWindow: Gtk.Window
 {	
@@ -22,9 +23,15 @@ public partial class MainWindow: Gtk.Window
 //		treeView.AppendColumn ("id", new CellRendererText (), "text", 0);
 //		treeView.AppendColumn ("nombre", new CellRendererText (), "text", 1);
 		string[] columnNames = getColumnNames (dataReader);
-		for (int index = 0; index < columnNames.Length; index++)
-			treeView.AppendColumn (columnNames [index], new CellRendererText (), "text", index);
-
+		CellRendererText cellRendererText = new CellRendererText();
+		for (int index = 0; index < columnNames.Length; index++) {
+			int column = index;
+			treeView.AppendColumn (columnNames [index], cellRendererText,
+			                       delegate(TreeViewColumn tree_column, CellRenderer cell, TreeModel tree_model, TreeIter iter) {
+				string value = tree_model.GetValue (iter, column).ToString ();
+				cellRendererText.Text = "[" + value + "]";
+			});
+		}
 		//ListStore listStore = new ListStore (typeof(String), typeof(String));
 		Type[] types = getTypes (dataReader.FieldCount);
 		ListStore listStore = new ListStore (types);
