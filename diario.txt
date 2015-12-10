@@ -1,3 +1,17 @@
+2015.12.10
+comprobamos requisitos para eclipse
+-ppa java de oracle
+si no esta
+-sudo apt-add-repository ppa:webupd8team/java
+-instalar el jdk7 si no esta
+sudo apt-get install oracle-java7-installer
+descargamos de eclipse.org el instalador para linux 64 bits
+descromprimimos el tar.gz y ejecutamos el instalador (eclipse-inst)
+elegimos eclipse IDE for java developers
+
+
+
+
 2015.09.29
 añadida foreing de articulo categoria a categoria id
 
